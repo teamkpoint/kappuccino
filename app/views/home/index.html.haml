@@ -1,0 +1,4 @@
+#links
+  - ['popular', 'recent', 'mustsee'].each do |type|
+    %span.link-to-listing
+      = link_to "#{type.camelize} Kapsules", kapsules_path(:type => type)

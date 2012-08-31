@@ -1,0 +1,11 @@
+development:
+  kpoint_host: acme.kpoint.com
+  client_id: cib6d178dca3694bd69305247e20a3478a
+test:
+  kpoint_host: <your domain host> 
+  client_id: <your client id>
+
+production:
+  kpoint_host: <your domain host> 
+  client_id: <your client id>
+
