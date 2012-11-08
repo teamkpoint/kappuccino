@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
     (render :status => :forbidden, :text => "Forbidden") and return if access_denied?
     return if access_granted?
     redirect_url = callback_url
-
+    cookies[:requested_url] = request.fullpath
     redirect_to("https://#{kpoint_host}/api/v1/oauth2/authorize?response_type=token&client_id=#{oauth_client_id}&redirect_uri=#{URI.encode(redirect_url)}")
   end
 
